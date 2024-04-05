@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCP Foundation</title>
+
+    <!-- Links -->
+    <!-- Custom styling for main page (includes styling for header and option menu, so linked across every page) -->
+    <link rel="stylesheet" href="Styles/main-styling.css">
+
+    <!-- Google fonts link to Merriweather Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Noto+Sans+Tangsa:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header section -->
+    <section class="header-section">
+        <div class="header-container">
+            <div class="logo-container" onclick="sendTo('index')">SCP Foundation</div>
+            <div class="site-control-options">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg_hamburger_menu" onclick="callOptionsMenu()"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" fill ="#eaf0f4"/></svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Image Section -->
+    <section class="hero-image">
+        <div class="hero-image-container">
+            <div class="text-container">
+                <span>Public Database</span>
+                <span>scp foundation</span>
+                <span>Secure. <span>Contain.</span> Protect.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Container for gallery/ carousel (only scrollable on mobile views) -->
+    <div class="section-1 gallery-section">
+        <h1>Explore the Foundation</h1>
+        <div class="section-1-content-container">
+                <div class="primary-carousel">
+                    <div class="game-card-container" onclick="sendTo('./scp-002')">
+                        <div class="game-card" id="item-1"></div>
+                        <div class="game-title">
+                            <span>1</span>
+                            <div class="scp-title">
+                                <span>Living Room</span>
+                                <span>Euclid</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-card-container" onclick="sendTo('./scp-003')">
+                        <div class="game-card" id="item-2"></div>
+                        <div class="game-title">
+                            <span>2</span>
+                            <div class="scp-title">
+                                <span>Biological&nbsp;Motherboard</span>
+                                <span>Euclid</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-card-container" onclick="sendTo('./scp-004')">
+                        <div class="game-card" id="item-3"></div>
+                        <div class="game-title">
+                            <span>3</span>
+                            <div class="scp-title">
+                                <span>Rusted Door</span>
+                                <span>Euclid</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-card-container" onclick="sendTo('./scp-005')">
+                        <div class="game-card" id="item-4"></div>
+                        <div class="game-title">
+                            <span>4</span>
+                            <div class="scp-title">
+                                <span>The Skeleton Key</span>
+                                <span>Safe</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-card-container" onclick="sendTo('./scp-006')">
+                        <div class="game-card" id="item-5"></div>
+                        <div class="game-title">
+                            <span>5</span>
+                            <div class="scp-title">
+                                <span>Fountain of Youth</span>
+                                <span>Safe</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Report section -->
+    <section class="report">
+        <div class="report-container">
+            <div class="section-1 report-section">
+                <h1>Report a sighting</h1>
+                <div class="report-content-main-container">
+                    <div class="report-text">
+                        Spotted something you can't explain? Let us handle it.
+                    </div>
+                    <div class="report-cta-interactable">
+                        <span>Click here to report your sighting</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" fill="#eaf0f4"/></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- collapsable menu to control site. Contains links to all SCP pages -->
+    <section class="site-control-menu-main">
+        <div class="site-control-menu">
+            <div class="header-container-sub">
+                <span>Scp Foundation</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z" fill="#252627" onclick="closeMenu()"/></svg>
+            </div>
+            <div class="site-control-options-sub">
+                <a href="index.html">Home</a>
+                <div class="explore-site">
+                    <div class="open-explore-menu" onclick="getMenu()">
+                        <span>Explore</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="close"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" fill="#252627"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" class="open" onclick="openMenu()"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z" fill="#252627"/></svg>
+                    </div>
+                    <div class="explore-options">
+                       <a href="./scp-002.html">Scp-002</a>
+                       <a href="./scp-003.html">Scp-003</a>
+                       <a href="./scp-004.html">Scp-004</a>
+                       <a href="./scp-005.html">Scp-005</a>
+                       <a href="./scp-006.html">Scp-006</a>
+                   </div>
+                </div>
+            </div>
+       </div>
+    </section>
+</body>
+<script src="./Scripts/main-script.js"></script>
+</html>

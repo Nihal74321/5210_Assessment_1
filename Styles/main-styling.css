@@ -1,0 +1,397 @@
+*:root /* Colour Palette Used across all stylesheets */ /* This was created using Realtimecolours @ www.realtimecolors.com*/
+{
+    --background-color:#252627;
+    --text-color:#eaf0f4;
+    --primary-color:#fe0254;
+    --secondary-color:#aa0711;
+    --accent-color:#f6cb23; 
+}
+*
+{
+    box-sizing: border-box;
+}
+/* Gets rid of base anchor tag styling */
+a
+{
+    text-decoration: none;
+    color: var(--text-color);
+}
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Sans Tangsa", sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+.header-container
+{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 12fr;
+    padding: 0.64rem 3.025rem;
+    position: fixed;
+    z-index: 99;
+    transition: background-color 250ms ease-in-out;
+}
+.logo-container
+{
+    text-transform: uppercase;
+    color: var(--text-color);
+    font-weight: 800;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+.site-control-options
+{
+    text-align: right;
+}
+.svg_hamburger_menu
+{
+    cursor: pointer;
+    width: 2rem;
+    aspect-ratio: 1/1;
+}
+.hero-image-container
+{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../Images/scp-001-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: grid;
+    opacity: 0.6;
+}
+.hero-image-container::after
+{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 25%;
+    top: 75%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
+}
+.text-container
+{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--text-color);
+}
+.text-container > span:nth-child(1)
+{
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+.text-container > span:nth-child(2)
+{
+    font-size: 3.815rem;
+    font-weight: 800;
+    color: var(--accent-color);
+    text-transform: uppercase;
+}
+.text-container > span:nth-child(3)
+{
+    font-size: 1.53rem;
+    font-weight: 600;
+}
+.section-1
+{
+    width: 100%;
+    display: grid;
+    margin-bottom: 8rem;
+}
+.section-1 > * 
+{
+    width: 85vw;
+    place-self: center;
+}
+.section-1 > h1 
+{
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    color: var(--text-color);
+    margin-block: 3.812rem 1.25rem; 
+}
+.section-1-content-container
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    margin-block: 0rem 2.441rem;
+    height: 25vh;
+}
+.primary-carousel
+{
+    gap: 0.8rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.primary-carousel::-webkit-scrollbar
+{
+    display: none;
+}
+.game-card-container
+{
+    width: 100%;
+    aspect-ratio: 4/3;
+    cursor: pointer;
+}
+.game-card
+{
+    width: 100%;
+    aspect-ratio: 2/1;
+    border-radius: 0.64rem;
+    background-image: url('../Images/scp-001-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.game-title
+{
+    font-size: 1rem;
+    margin: 0.32rem 0.32rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: var(--text);
+    opacity: 0.8;
+    display: flex;
+    gap: 0.8rem;
+}
+.game-title > *:nth-child(1)
+{
+    font-size: 1.952rem;
+}
+.scp-title
+{
+    display: grid;
+    grid-template-rows: repeat(1fr);
+}
+.scp-title> *:nth-child(1)
+{
+    font-size: 1rem;
+}
+.scp-title > *:nth-child(2)
+{
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+.game-card:hover
+{
+    opacity: 0.6;
+}
+.game-title > span:nth-child(1)
+{
+    opacity: 0.6;
+}
+#item-1
+{
+    background-image: url('../Images/SCP-002-Main_Image.jpg');
+}
+#item-2
+{   
+    background-image: url('../Images/SCP-003-Main_Image.jpg');
+}
+#item-3
+{
+    background-image: url('../Images/SCP-004-Main_Image.jpg');
+}
+#item-4
+{
+    background-image: url('../Images/SCP-005-Main_Image.jpg');
+}
+#item-5
+{
+    background-image: url('../Images/SCP-006-Main_Image.jpg');
+}
+
+/* Media queries for header/ navbar */
+@media only screen and (max-width: 1200px) {
+    .header-container
+    {
+        padding-inline: 2.441rem;
+    }
+    
+}
+/* Value borrowed from Dropout @ signup.dropout.tv */
+@media only screen and (max-width: 479px) {
+    .header-container
+    {
+        padding-inline: 1rem;
+    }
+    .text-container > span:nth-child(2)
+    {
+        font-size: 2.441rem;
+    }
+}
+@media only screen and (max-width: 359px) {
+    .text-container > span:nth-child(2)
+    {
+        font-size: 2rem;
+    }
+    .text-container > span:nth-child(3), .text-container > span:nth-child(1)
+    {
+        font-size: 1.25rem;
+    }
+}
+.report
+{
+    background-color: var(--accent-color);
+    color: var(--background-color);
+}
+.report-container
+{
+    min-height: 20rem;
+}
+.report-section > h1
+{
+    color: var(--background-color);
+}
+.report-text
+{
+    font-size: 2.441rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.report-cta-interactable
+{
+    font-size: 1.53rem;
+    margin-top: 1.25rem;
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    gap: 0.64rem;
+    font-weight: 500;
+}
+.report-cta-interactable > * 
+{
+    cursor: pointer;
+}
+.report-cta-interactable:hover svg 
+{
+    rotate: -135deg;
+}
+.report-cta-interactable > span
+{
+    display: inline;
+}
+.report-cta-interactable > svg
+{
+    transition: rotate 0.25s ease-in;
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--background-color);
+    border-radius: 50%;
+    padding: 0.64rem;
+}
+/* Media queries for report section */
+@media only screen and (max-width: 659px)
+{
+    .report-text
+    {
+        font-size: 1.53rem;
+    }
+    .report-cta-interactable
+    {
+        font-size: 1.25rem;
+        gap: 0.2rem;
+    }
+}
+.site-control-menu-main, .site-control-menu span, a, p
+{
+    color: var(--background-color);
+    font-size: 2.441rem;
+    font-weight: 600;
+}
+.site-control-menu-main 
+{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: none;
+}
+.site-control-menu
+{
+    display: grid;
+    z-index: 100;
+    grid-template-rows: repeat(1fr);
+    width: 100%;
+    height: 100%;
+    background-color: var(--accent-color);
+    gap: 0.8rem;
+    padding-inline: 1rem;
+}
+.header-container-sub
+{
+    display: flex;
+    justify-content: space-between;
+    height: 8rem;
+    align-items: center;
+}
+.header-container-sub > svg
+{
+    width: 3rem;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+}
+.site-control-options-sub
+{
+    display: grid;
+    grid-template-rows: repeat(1fr);
+    gap: 1rem;
+}
+.explore-site 
+{
+    display: grid;
+}
+.open
+{
+    visibility: visible;
+}
+.close
+{
+    visibility: hidden;
+}
+.open-explore-menu
+{
+    display: flex;
+    align-items: center;
+}
+.explore-site svg
+{
+    left: 10rem;
+    width: 2rem;
+    aspect-ratio: 1/1;
+    position: absolute;
+}
+.explore-options
+{
+    display: grid;
+    gap: 0.64rem;
+    visibility: hidden;
+}
+/* Media queries for collapsable menu option */
+@media only screen and (max-width: 639px)
+{
+    .header-container-sub > span 
+    {   
+        font-size: 2.441rem;
+    }
+}
+@media only screen and (max-width:425px)
+{
+    .header-container-sub > span
+    {
+        font-size: 1.53rem;
+    }
+}
